@@ -1,0 +1,62 @@
+name: Custom FiveM Server Recipe
+description: ox_core + ox_inventory + ox_target + ox_lib + ox_banking + oxmysql + ox_doorlock + ox_commands + ox_fuel + illenium-appearance + multicharacter + ps-hud
+tasks:
+  - action: download_github
+    src: https://github.com/overextended/ox_core
+    ref: main
+    dest: ./resources/[ox]/ox_core
+
+  - action: download_github
+    src: https://github.com/overextended/ox_lib
+    ref: main
+    dest: ./resources/[ox]/ox_lib
+
+  - action: download_github
+    src: https://github.com/overextended/ox_target
+    ref: main
+    dest: ./resources/[ox]/ox_target
+
+  - action: download_github
+    src: https://github.com/overextended/ox_inventory
+    ref: main
+    dest: ./resources/[ox]/ox_inventory
+
+  - action: download_github
+    src: https://github.com/overextended/ox_banking
+    ref: main
+    dest: ./resources/[ox]/ox_banking
+
+  - action: download_github
+    src: https://github.com/overextended/oxmysql
+    ref: main
+    dest: ./resources/[ox]/oxmysql
+
+  - action: download_github
+    src: https://github.com/overextended/ox_doorlock
+    ref: main
+    dest: ./resources/[ox]/ox_doorlock
+
+  - action: download_github
+    src: https://github.com/overextended/ox_commands
+    ref: main
+    dest: ./resources/[ox]/ox_commands
+
+  - action: download_github
+    src: https://github.com/overextended/ox_fuel
+    ref: main
+    dest: ./resources/[ox]/ox_fuel
+
+  - action: download_github
+    src: https://github.com/iLLeniumStudios/illenium-appearance
+    ref: main
+    dest: ./resources/[custom]/illenium-appearance
+
+  - action: download_github
+    src: https://github.com/JoshuaBloomfield/ps-hud
+    ref: main
+    dest: ./resources/[custom]/ps-hud
+
+  - action: set_database
+    dbType: mysql
+
+  - action: connect_database
